@@ -12,9 +12,11 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
 
-  # ✅ 추가된 패키지들
   go_router: ^13.2.0
   easy_localization: ^3.0.3
+
+  # 📡 HTTP 요청 처리
+  http:
 
 dev_dependencies:
   flutter_test:
@@ -25,4 +27,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/translations/ # ✅ easy_localization용 번역 파일 위치
+    - assets/translations/ # 🌐 easy_localization용 번역 파일 위치
