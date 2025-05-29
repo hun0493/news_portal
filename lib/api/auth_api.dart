@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:news_portal/api/api_config.dart';
-import 'package:news_portal/api/models/auth.dart';
+import 'package:news_portal/api/models/auth_api.dart';
 
 class AuthApi {
   static Future <Auth?>({required String email, required String password})async {

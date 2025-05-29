@@ -17,6 +17,9 @@ dependencies:
 
   # 📡 HTTP 요청 처리
   http:
+  google_fonts: ^6.2.1 # ✅ 구글 폰트 추가
+
+  lucide_icons_flutter: ^3.0.2
 
 dev_dependencies:
   flutter_test:
