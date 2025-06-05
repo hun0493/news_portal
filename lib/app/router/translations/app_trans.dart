@@ -1,5 +1,8 @@
 import 'dart:math';
 
+import 'package:news_portal/presentation/news_list/widgets/app_bar.dart';
+import 'package:news_portal/presentation/news_list/widgets/hot_topic.dart';
+
 class AppTrans {
   static final login = (
     welcome: 'welcome',
@@ -15,4 +18,12 @@ class AppTrans {
     hotTopics: 'newsList.hotTopics',
     latestNews: 'newsList.latestNews',
   );
+
+  static const newsList = (
+   hotTopic: 'newsList.hotTopic',
+   lastestNews: 'newsList.lastestNews',
+   noData: 'newsList.'
+  )
 }
+
+

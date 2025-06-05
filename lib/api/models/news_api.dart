@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:news_portal/api/api_config.dart';
 
 class NewsApi {
   static Future<void> getList() async {
+    final result = await http
     try {
       final result = await http.get(Uri.parse(ApiConfig.news.getList));
       if (result.statusCode != 200) {
@@ -43,6 +45,7 @@ class NewsApi {
     */
     //[news] => List<dynamic>
     //1.Return
-    return newsRaw.map((date) => NewsDate.fromMap(date)).toList();
+   static Future<List<NewsData>?>getLastest() =>
+   _getNews(ApiConfig.news.getIssue)
   }
 }
