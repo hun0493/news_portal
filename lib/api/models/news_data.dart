@@ -30,18 +30,18 @@ class NewsData {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'title': title,
-      'imageUrl': imageUrl,
+      'image_url': imageUrl,
       'description': description,
-      'pubDate': pubDate,
+      'pub_date': pubDate,
     };
   }
 
   factory NewsData.fromMap(Map<String, dynamic> map) {
     return NewsData(
-      title: map['title'],
-      imageUrl: map['imageUrl'],
-      description: map['description'],
-      pubDate: map['pubDate'],
+      title: map['title'] as String,
+      imageUrl: map['image_url'] != null ? map['image_url'] as String : null,
+      description: map['description'] as String,
+      pubDate: map['pub_date'] as String,
     );
   }
 

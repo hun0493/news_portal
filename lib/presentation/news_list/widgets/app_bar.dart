@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:';
-import 'package:news_portal/presentation/Common/app_logo.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:news_portal/widgets/app_logo.dart';
 
-class NewsListAppBar extends StatusTransitionWidget
-    implements PreferredSizeWidget {
+class NewsListAppBar extends StatelessWidget implements PreferredSizeWidget {
   const NewsListAppBar({super.key});
-}
 
-@override
-Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
-@override
-Widget build(BuildContext context) {
-  return AppBar(
-    title: AppLogo(
-      title: const AppLogo(),
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: Applogo(),
       actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-        IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+        IconButton(onPressed: () {}, icon: Icon(LucideIcons.search)),
+        IconButton(onPressed: () {}, icon: Icon(LucideIcons.menu)),
       ],
-    ),
-    body: Column(
-      children: const [
-        // 여기에 뉴스 리스트 위젯 등을 추가
-      ],
-    ),
-  );
+    );
+  }
+
+  @override
+  Size get PreferredSize => Size.fromHeight(kToolbarHeight);
 }

@@ -1,30 +1,19 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+// {
+//   "user_id": "string",
+//   "access_token": "string",
+//   "token_type": "string",
+//   "expires_in": 60,
+//   "expires_at": 0
+// }
+
 import 'dart:convert';
 
-/*
-{
-"user_id": "String",
-"access_token": "String",
-'token_type': "String",
-"expires_in": 60,
-"expires_at": 0
-}
-*/
-
 class Auth {
-  ///유저 아이디
   final String uid;
-
-  /// 토큰
   final String token;
-
-  /// 토큰 타입
   final String tokenType;
-
-  ///  토큰 만료 시간
   final int expiresIn;
-
-  ///  토큰 만료 기한
   final int expiresAt;
   Auth({
     required this.uid,
@@ -54,7 +43,7 @@ class Auth {
     return <String, dynamic>{
       'user_id': uid,
       'access_token': token,
-      'token_Type': tokenType,
+      'token_type': tokenType,
       'expires_in': expiresIn,
       'expires_at': expiresAt,
     };
@@ -64,7 +53,7 @@ class Auth {
     return Auth(
       uid: map['user_id'] as String,
       token: map['access_token'] as String,
-      tokenType: map['token_Type'] as String,
+      tokenType: map['token_type'] as String,
       expiresIn: map['expires_in'] as int,
       expiresAt: map['expires_at'] as int,
     );
@@ -89,5 +78,14 @@ class Auth {
         other.tokenType == tokenType &&
         other.expiresIn == expiresIn &&
         other.expiresAt == expiresAt;
+  }
+
+  @override
+  int get hashCode {
+    return uid.hashCode ^
+        token.hashCode ^
+        tokenType.hashCode ^
+        expiresIn.hashCode ^
+        expiresAt.hashCode;
   }
 }

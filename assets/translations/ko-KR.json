@@ -8,7 +8,8 @@
     "signinwith": "{sso}로 로그인"
   },
   "newsList": {
-    "hotTopic": "뜨거운 주제",
-    "lastestNews": "최신 뉴스"
+    "hotTopic": "오늘의 주제",
+    "lastestNews": "최신 뉴스",
+    "noDate": "뉴스가 없습니다."
   }
 }

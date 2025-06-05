@@ -25,7 +25,7 @@ final appRouter = GoRouter(
               child: child,
             );
           },
-          child: NewsListScreen(),
+          child: lastestNews(),
         );
       },
     ),

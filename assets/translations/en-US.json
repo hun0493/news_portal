@@ -9,6 +9,7 @@
   },
   "newsList": {
     "hotTopic": "Hot Topic",
-    "lastestNews": "Lastest News"
+    "lastestNews": "Lastest News",
+    "noDate": "Np News"
   }
 }
